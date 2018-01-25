@@ -1,4 +1,4 @@
-![Logo](luigi.png)
+![Logo](luigi_logo.png)
 
 # Introduction
 This chart bootstraps a [Luigi 2.6.0](https://github.com/spotify/luigi) deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
