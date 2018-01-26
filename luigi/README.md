@@ -44,7 +44,11 @@ The following tables lists the configurable parameters of the chart and their de
 | `service.externalPort`   | Kubernetes Service `targetPort`           | `8082`                                                 |
 | `service.internalPort`   | Kubernetes Service `port`                 | `8082`                                                 |
 | `service.name`           | Kubernetes Service `name`                 | `name`                                                 |
+| `service.loadBalancerIP` | `LoadBalancer` IP if used                 | `nil`                                                  |
+| `service.nodePortExposed`| `NodePort` value if used (only for test)  | `nil`                                                  |
 | `service.type`           | Kubernetes Service type                   | `ClusterIP`                                            |
+
+To the best of our knowledge, the use of the `NodePort` option as service type should be limited only for testing (e.g. with minikube) due to security concerns.  
 
 Other parameters are also changeable. Please consult all available parameters in the `values.yaml` file.
 

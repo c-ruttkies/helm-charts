@@ -2,9 +2,9 @@
 ## https://github.com/phnmnl/container-luigi
 ##
 image:
+    pullPolicy: IfNotPresent
     repository: container-registry.phenomenal-h2020.eu/phnmnl/luigi
     tag: v2.6.0_cv0.1.5
-    pullPolicy: IfNotPresent
 
 ## Assuming use of ingress controllers
 ## ref: https://kubernetes.io/docs/concepts/services-networking/ingress/
@@ -31,8 +31,10 @@ resources:
 ## 
 ##
 service:
-    name: "http"
     internalPort: 8082
     externalPort: 8082
+    loadBalancerIP: ""
+    name: "http"
+    nodePortExposed: ""
     type: "ClusterIP"
     
