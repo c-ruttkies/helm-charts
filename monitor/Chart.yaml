@@ -1,0 +1,4 @@
+apiVersion: v1
+description: A Helm chart for deploying Heapster->InfluxDB->Grafana
+name: monitor
+version: 0.0.1
