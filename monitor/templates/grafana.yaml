@@ -77,7 +77,7 @@ metadata:
   name: grafana-ingress
 spec:
   rules:
-  - host: {{hostname}}.{{domain}}
+  - host: grafana.134.176.27.249.nip.io 
     http:
       paths:
       - path: /
