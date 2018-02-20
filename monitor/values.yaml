@@ -1,0 +1,6 @@
+
+
+influxdb_create_pvc: false
+influxdb_pvc_name: "influxdb-pvc"
+influxdb_pvc_capacity: "1Gi"
+
