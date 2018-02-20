@@ -70,3 +70,17 @@ spec:
     targetPort: 3000
   selector:
     k8s-app: grafana
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: grafana-ingress
+spec:
+  rules:
+  - host: {{hostname}}.{{domain}}
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: monitoring-grafana
+          servicePort: http
