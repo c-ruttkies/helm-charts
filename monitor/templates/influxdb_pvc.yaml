@@ -1,0 +1,13 @@
+{{ if .Values.influxdb_create_pvc }}
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: {{ .Values.influxdb_pvc_name }}
+  namespace: kube-system
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: {{ .Values.influxdb_pvc_capacity }} 
+{{ end }}
