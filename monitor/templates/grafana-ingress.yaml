@@ -3,13 +3,13 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: grafana-ingress
+  namespace: kube-system
 spec:
   rules:
   - host: {{.Values.hostname}}.{{.Values.domain}}
     http:
       paths:
-      - path: /
-        backend:
+      - backend:
           serviceName: monitoring-grafana
-          servicePort: http
+          servicePort: 80
 {{ end }}

@@ -1,6 +1,7 @@
-influxdb_create_pvc: false
+influxdb_create_pvc: true
 influxdb_pvc_name: "influxdb-pvc"
 influxdb_pvc_capacity: "1Gi"
+use_ingress: true
 # Ingress
-domain: "mydomain.dev"
+domain: "domain.dev"
 hostname: "grafana"
